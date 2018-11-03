@@ -81,7 +81,7 @@ module.exports = {
     host: "localhost", // listen on all interfaces
     https: false, // true for self-signed, object for cert authority
     noInfo: false, // only errors & warns on hot reload
-    port: 8080
+    port: process.env.PORT || 8080
   },
   // advance misc config
   cache: false,

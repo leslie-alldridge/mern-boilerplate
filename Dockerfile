@@ -7,9 +7,9 @@ WORKDIR ${DIR}
 
 COPY package.json /app
 RUN npm install
-COPY . ${DIR} 
-RUN chmod +x boot.sh
+COPY . . 
+
 
 
 EXPOSE 8080
-ENTRYPOINT [ "./boot.sh" ]
+CMD ["npm", "start"]
