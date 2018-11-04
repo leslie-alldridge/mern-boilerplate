@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 mongoose
   .connect(
-    "mongodb://heroku_f66trml5:m1n99vr4t31j2ipncmu79cboui@ds151393.mlab.com:51393/heroku_f66trml5",
+    process.env.MONGODB_URI,
     { useNewUrlParser: true }
   )
   .then(() => console.log("MongoDB Connected"))
